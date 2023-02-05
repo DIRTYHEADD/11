@@ -353,50 +353,29 @@ textarea.input {
   justify-content: center;
   position: relative;
 }
-@media (max-width: 479.98px) {
-  .header-about {
-    justify-content: flex-end;
-  }
-}
-.header-about__menu {
-  position: relative;
-  z-index: 3;
-}
-@media (max-width: 479.98px) {
-  .header-about__menu {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    z-index: 2;
-    top: -100%;
-    left: 0;
-    padding: 80px 20px 20px;
-    overflow: auto;
-    transition: all 0.6s ease;
-  }
-  .header-about__menu.active {
-    top: 0;
-  }
-}
 .header-about__list {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-}
-@media (max-width: 479.98px) {
-  .header-about__list {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
+  padding: 10px 0;
 }
 .header-about__item:not(:last-child) {
   margin-right: 50px;
 }
-@media (max-width: 479.98px) {
+@media (max-width: 767.98px) {
+  .header-about__item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 420px) {
+  .header-about__item {
+    flex: 0 1 50%;
+    margin-bottom: 10px;
+  }
   .header-about__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 30px;
   }
 }
 .header-about__link {
@@ -412,50 +391,6 @@ textarea.input {
 }
 .header-about__link:hover {
   color: #ada074;
-}
-@media (max-width: 479.98px) {
-  .header-about__link {
-    font-size: 30px;
-  }
-}
-.header-about__burger {
-  display: none;
-}
-@media (max-width: 479.98px) {
-  .header-about__burger {
-    display: block;
-    width: 30px;
-    height: 18px;
-    position: relative;
-    z-index: 3;
-  }
-  .header-about__burger span {
-    position: absolute;
-    top: 8px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    transition: all 0.3s ease;
-  }
-  .header-about__burger span:nth-child(1) {
-    top: 0;
-  }
-  .header-about__burger span:nth-child(3) {
-    top: auto;
-    bottom: 0;
-  }
-  .header-about__burger.active span:nth-child(1) {
-    top: 8px;
-    transform: rotate(45deg);
-  }
-  .header-about__burger.active span:nth-child(2) {
-    transform: scale(0);
-  }
-  .header-about__burger.active span:nth-child(3) {
-    bottom: 8px;
-    transform: rotate(-45deg);
-  }
 }
 
 .about {
